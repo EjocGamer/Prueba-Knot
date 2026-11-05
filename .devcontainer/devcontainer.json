@@ -1,0 +1,10 @@
+{
+  "name": "knot-qa-starter",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "cd ts-playwright && npm ci && npx playwright install --with-deps chromium",
+  "containerEnv": { "CI": "true" },
+  "customizations": {
+    "codespaces": { "openFiles": ["ts-playwright/tests/s2/casos/transferencias.csv", "ELIGE-TU-RUTA.md"] },
+    "vscode": { "extensions": ["ms-playwright.playwright"] }
+  }
+}
